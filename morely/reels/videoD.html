@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <title>reels</title>
+    <style>
+         @media  screen and (min-width:320px){
+                .reacao{
+                position: fixed;
+                right: 5%;
+                top: 30%;
+
+              }
+        }
+            @media  screen and (min-width:375px){
+                .reacao{
+                position: fixed;
+                right: 5%;
+                top: 50%;
+
+              }
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: black;
+        }
+        video{
+            position: absolute;
+            width: 100%;
+        }
+        #short{
+            width: 100%;
+        }
+        #close{
+            color: #ffffff;
+            margin-top: 5%;
+            padding: 50px;
+            background-color: #00000045;
+            font-size: 40px;
+        }
+        .comentario{
+            position: fixed;
+            bottom: 0%;
+            height: 70px;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.41);
+            border-radius: 10px;
+        }
+        #comentar{
+            position: absolute;
+            bottom: 10%;
+            left: 5%;
+            height: 50px;
+            width: 70%;
+            border-radius: 10px;
+            font-size: 17px;
+            padding-top: 5px;
+            padding-left: 10px;
+            background-color: rgba(0, 0, 0, 0.467);
+            color: #ffffff;
+            border: 2px solid rgba(238, 7, 61, 0.479);
+            font-family: arial;
+            font-weight: 100;
+            outline: none;
+        }
+        button{
+            position: absolute;
+            bottom: 10%;
+            right: 7%;
+            height: 50px;
+            width: 50px;
+            font-size: 30px;
+            border-radius: 15px;
+            border-color: rgb(216, 36, 72);
+            background-color: rgb(238, 7, 61);
+            color: #ffffff;
+        }
+
+      .reacao i{
+        font-size: 30px;
+        color: rgb(243, 243, 243);
+        padding: 10px;
+        background-color: rgba(0, 0, 0, 0.356);
+        margin-top: 10px;
+        border-radius: 10px;
+        transition: 1s;
+      }
+      #anime{
+        background-color: transparent;
+        color: red;
+        position: absolute;
+        transition: 1s;
+        animation: reagir 1s ease-in-out;
+      }
+      @keyframes reagir{
+        50%{
+            font-size: 40px;
+            transform: translateY(-50px);
+        }
+        70%{
+            opacity: 0.7;
+        }
+        80%{
+            opacity: 0.4;
+        }
+        90%{
+            opacity: 0;
+            font-size: 45px;
+            transform: translateY(-60px);
+
+        }
+        100%{
+            opacity: 0;
+        }
+      }
+    
+      
+    </style>
+</head>
+<body>
+    <div class="video">
+        <video id="short" src="../video/VID-20240709-WA0100.mp4" autoplay></video>
+    </div>
+    <i id="close" onclick="menuOFF()" class="fa-solid fa-xmark" style="color:  #ffffff;position: absolute; transition: .2s; padding: 10px; border-radius: 10px; color: #ffffff; margin-left: 80%;  cursor: pointer;"></i>
+ 
+
+
+    <div class="comentario">
+        <input id="comentar" type="text" placeholder="Comentar...">
+        <button onclick="enviarCM()"><i class="fa-solid fa-paper-plane"></i></button>
+    </div>
+    
+
+
+
+<!-- aqui começa a caixa de reação -->
+<div class="reacao">
+    <div style="position: relative;">
+     <i id="anime"  class="fa-solid fa-heart" style="display:none;"></i>
+     <i id="coracao" onclick="cor()" class="fa-solid fa-heart"></i>
+    <p style="position: absolute; transform: translateX(5px);   color: rgb(255, 255, 255); font-weight: 300; background-color: rgba(0, 0, 0, 0.747); padding:2px; border-radius: 5px;">398K</p>
+ </div>
+     <br>
+     <div style="position: relative;">
+         <i id="star" onclick="cor2()" class="fa-solid fa-star"></i>
+     <p style="position: absolute; transform: translateX(5px);   color: rgb(255, 255, 255); font-weight: 300; background-color: rgba(0, 0, 0, 0.747); padding:2px; border-radius: 5px;">573K</p>
+ </div>
+     <br>
+     <div style="position: relative;">
+       <i id="premio" onclick="cor3()" style="font-size: 30px; padding: 15px;" class="fa-solid fa-award"></i>
+     <p style="position: absolute; transform: translateX(5px); color: rgb(255, 255, 255); font-weight: 300; background-color: rgba(0, 0, 0, 0.747); padding:2px; border-radius: 5px;">923K</p>
+ </div>
+ </div>
+ <!-- aqui termina a caixa de reação -->
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+                function enviarCM() {
+            var mensagem;
+            var CM;
+            var CM = document.getElementById("comentar").value;
+            mensagem = document.getElementById("SMS");
+            document.getElementById("comentar").value=" ";
+
+         
+         
+        }
+
+
+
+
+
+              function cor() {
+            var cor = document.getElementById("coracao");
+            cor.style.color="red";
+           var anime = document.getElementById("anime");
+            anime.style.display="flex";
+            
+        }
+        function cor2() {
+            var cor = document.getElementById("star");
+            cor.style.color="yellow";
+        }
+        function cor3() {
+            var cor = document.getElementById("premio");
+            cor.style.color=" rgb(83, 83, 232)";
+        }
+
+
+
+
+
+
+        function menuOFF(){
+            window.location.href="../pagina1.html"
+        }
+    </script>
+</body>
+</html>

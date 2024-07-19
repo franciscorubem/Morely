@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.min.css">
+    <title>Chat</title>
+    <style>
+          @media  screen and (min-width:320px){
+            .conteudo{
+            position: absolute;
+            height: 74%;
+            top: 15%;
+            padding: 10px;
+            overflow: auto;
+            padding-bottom: 40px;
+            padding-top: 35px;
+        }
+  
+        }
+         @media  screen and (min-width:375px){
+            .conteudo{
+            position: absolute;
+            height: 74%;
+            top: 15%;
+            padding: 10px;
+            overflow: auto;
+            padding-bottom: 40px;
+            }
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgba(12, 12, 12, 0.96);
+        }
+        header{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            display: flex;
+            background-color: rgb(0, 0, 0);
+            height: 100px;
+            border-bottom: 3px solid rgba(255, 255, 255, 0.453);
+        }
+        h1{
+            color: rgb(255, 255, 255);
+            font-family: arial;
+            font-weight: 600;
+            transform: translateY(30%);
+            position: absolute;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%);
+        }
+        #back{
+            color: white;
+            transform: rotateY(180deg);
+            font-size: 20px;
+            position: absolute;
+            left: 5%;
+            top: 30%;
+            background-color: rgba(18, 17, 17, 0.793);
+            padding: 10px;
+            border-radius :5px;
+        }
+        #def{
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            right: 5%;
+            top: 30%;
+            background-color: rgba(18, 17, 17, 0.796);
+            padding: 10px;
+            border-radius :5px; 
+        }
+        .caixaSMS{
+            position: fixed;
+            bottom: 0;
+            background-color: black;
+            width: 100%;
+            padding: 10px;
+            border-top: 3px solid rgba(255, 255, 255, 0.453)
+        }
+        input{
+            height: 45px;
+            width: 80%;
+            padding-top: 4px;
+            border-radius: 7px;
+            border: 2px solid rgba(202, 18, 49, 0.636);
+            background-color: rgba(0, 0, 0, 0.748);
+            font-size: 17px;
+            outline: none;
+            color: rgb(85, 84, 84);
+            padding-left: 5px;
+
+        }
+        button{
+            height: 45px;
+            width: 50px;
+            margin-left: 2%;
+            font-size: 25px;
+            background-color: rgb(255, 0, 43);
+            border: 2px solid rgb(179, 51, 72);
+            color: white;
+            border-radius: 10px;
+        }
+     
+        .conteudo .mensagem img{
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.645);
+            padding: 3px;
+            border-radius: 45px;
+        }
+        .conteudo .mensagem .txt{
+            position: relative;
+            max-width: 90%;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-left: 10px;
+            background-color: rgb(141, 4, 29);
+            font-family: arial;
+            color: rgb(203, 200, 200);
+        }
+    
+        .mensagem{
+            margin-top: 5%;
+        }
+
+    </style>
+</head>
+<body>
+  
+
+
+<!-- conteudo da mensagem -->
+<div class="conteudo">
+      <!-- nota -->
+      <p class="nt" style="text-align: center; background-color: rgba(0, 0, 0, 0.505); margin: 0px 30px; color: rgb(60, 59, 58); padding: 10px; border-radius: 10px; border: 2px solid rgba(255, 255, 255, 0.133); font-family: arial;  font-size: 15px; ">mensagens encriptadas ponto a ponto <br> comece sua conversa</p>
+      <!-- nota -->  
+
+
+   
+
+<div class="mensagem" style="position: relative;">
+    <img src="../img/rubem.jpg">
+    <div id="sms" ondblclick="reagir1()" class="txt">A sua presença ilumina nossas vidas. Obrigado por ser quem você é🥰❤️.</div>
+    <p style="position: absolute; right: 20%; color: rgb(104, 104, 105); font-family: arial; font-size: 13px;">Clique duas vezes para curtir </p>
+    <i id="cr1" style="opacity: 0; color: red; background-color: rgba(56, 55, 55, 0.411); padding: 5px; border-radius: 45px; position:absolute; right: 10%;transition: 1s;" class="fa-solid fa-heart"></i>
+</div>
+
+<div class="mensagem">
+    <img src="../img/rubem.jpg">
+    <div id="sms2" ondblclick="reagir2()" class="txt">Você é um raio de sol em nossos dias. Sua existência nos faz mais felizes. <br> Não há palavras suficientes para expressar o quanto somos gratos por ter você em nossas vidas. Obrigado por tudo.🥺❤️👏</div>
+    <p style="position: absolute; right: 20%; color: rgb(104, 104, 105); font-family: arial; font-size: 13px;">Clique duas vezes para curtir </p>
+    <i id="cr2" style="opacity: 0; color: red; background-color: rgba(56, 55, 55, 0.411); padding: 5px; border-radius: 45px; position:absolute; right: 10%; transition: 1s;" class="fa-solid fa-heart"></i>
+</div>
+
+<div class="mensagem">
+    <img src="../img/rubem.jpg">
+    <div id="sms3" ondblclick="reagir3()" class="txt">sua bondade e compaixão tornam o mundo um lugar melhor. Obrigado por simplesmente ser você!❤️🥰😊.  você é um tesouro. Sua amizade é um presente que valorizamos todos os dias❤️.</div>
+    <p style="position: absolute; right: 20%; color: rgb(104, 104, 105); font-family: arial; font-size: 13px;">Clique duas vezes para curtir </p>
+    <i id="cr3" style="opacity: 0;   color: red; background-color: rgba(56, 55, 55, 0.411); padding: 5px; border-radius: 45px; position:absolute; right: 10%; transition: 1s; " class="fa-solid fa-heart"></i>
+</div>
+
+
+
+</div>
+<!-- termina conteudo da mensagem -->
+
+
+
+
+
+
+
+
+
+
+
+<!-- caixa de sms -->
+
+<div class="caixaSMS">
+    <input id="comentar" type="text" placeholder="Aa...">
+    <button onclick="reset()"><i class="fa-solid fa-rocket"></i></button>
+</div>
+<!-- caixa de sms -->
+
+
+
+
+
+<header>
+    <a href="../messenger.html"><i id="back" class="fa-solid fa-arrow-right"></i></a>
+    <h1 style="font-weight: 100; font-family: arial;">Morely</h1>
+    <i id="def" class="fa-solid fa-gear"></i>
+</header>
+<header>
+    <a href="../messenger.html"><i id="back" class="fa-solid fa-arrow-right"></i></a>
+    <h1 style="font-weight: 100; font-family: arial;">Morely</h1>
+    <i id="def" class="fa-solid fa-gear"></i>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+    function reagir1() {
+        var reagir = document.getElementById("cr1");
+        reagir.style.opacity="1"
+    }
+    function reagir2() {
+        var reagirB= document.getElementById("cr2");
+        reagirB.style.opacity="1"
+    }
+    function reagir3() {
+        var reagirC= document.getElementById("cr3");
+        reagirC.style.opacity="1"
+    }
+
+
+
+    function reset() {
+            var mensagem;
+            var CM;
+            var CM = document.getElementById("comentar").value;
+            mensagem = document.getElementById("SMS");
+            document.getElementById("comentar").value=" ";
+         
+        }
+
+</script>
+
+
+
+</body>
+</html>

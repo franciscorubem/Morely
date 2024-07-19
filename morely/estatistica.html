@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="pagina1.css">
+    <title>Estatística</title>
+    <style>
+            @media  screen and (min-width:320px){
+                .user{
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                background-color: rgb(174, 22, 86);
+                padding: 5px;
+                border-radius: 100px;
+                left: 50%;
+                transform: translate(-50%);
+
+        }
+        }
+            @media  screen and (min-width:375px){
+                .user{
+                position: absolute;
+                width: 120px;
+                height: 120px;
+                background-color: rgb(174, 22, 86);
+                padding: 5px;
+                border-radius: 100px;
+                left: 50%;
+                transform: translate(-50%);
+
+        }
+        }
+             ::-webkit-scrollbar{
+            display: none;
+            color: transparent;
+            background-color: black;
+        }
+        audio{
+            display: flex;
+            border-radius: 0px 15px 15px 15px;
+            background-color: rgb(194, 32, 54);
+            color: transparent;
+            border: 2px solid rgb(40, 29, 29);
+            width: 80%;
+            position: absolute;
+            left: 45%;
+            transform: translate(-50%);
+        }
+
+        .qualidade{
+            margin-left: 10px;
+            font-family: Arial;
+            color: #828080;
+            font-size: 20px;
+            
+        }
+        .caixa{
+            position: absolute;
+            top: 45%;
+            width: 100%;
+            padding-left: 10%;
+        }.loading{
+            animation: loading 3s ease-in-out ;
+        }
+  
+        @keyframes loading{
+            15%{
+                background-color: #490916;
+                width: 5%;
+            }
+            25%{
+                background-color: #350428;
+              
+            }
+            65%{
+                background-color: #970388;
+            
+            }
+        }
+    </style>
+</head>
+<body>
+      <!-- here start the head -->
+   <header>
+    <div class="h1" style="display: flex;">
+    <h1 style="margin: 5px; width: 50px; color: #ffffff;"><strong style="background-color: white; padding: 5px; border-radius:15px ; color: black; margin: 2px;">Marí</strong>lia</h1>
+    <i onclick="menuON()" id="menuBar" style="transition: .2s; position: absolute; padding: 10px; border-radius: 10px; color: #ffffff; margin-left: 80%; font-size: 30px; cursor: pointer;" class="fa-solid fa-bars"></i>
+    <i onclick="menuOFF()" class="fa-solid fa-xmark" style="display:none;color:  #ffffff;position: absolute; transition: .2s; padding: 10px; border-radius: 10px; color: #ffffff; margin-left: 80%; font-size: 30px; cursor: pointer;"></i>
+</div>
+    <div class="icons">
+    <strong id="home" onclick="link1()"><i id="ico" class="fa-solid fa-house"></i><strong id="number">15+</strong></strong>
+        <strong onclick="link2()"><i id="ico" class="fa-solid fa-chart-simple"></i></strong>
+        <strong onclick="link3()"><i id="ico" class="fa-solid fa-envelope" style="color: #ffffff;" ></i><strong id="number" style=" transition: 3s;">4</strong></strong>
+        <strong onclick="link4()"><i id="icoZ" style="font-size: 22px;"class="fa-solid fa-cloud"></i><strong id="number" style=" transition: 3s;">1</strong></strong>
+    </div>
+ 
+</header>
+<!-- here ands the head -->
+
+<h2 style="color: rgb(111, 111, 111); font-size: 20px; font-family: sans-serif; text-align: center;">Estatística</h2>
+
+<div class="caixa">
+
+<div class="caixaCADA">
+<p class="qualidade">Carinhosa</p>
+<div style="background-color: #434141; height: 30px; width: 80%; margin: 2%; border-radius: 10px; padding: 2px;">
+    <div class="loading" style="background-color: rgb(174, 22, 86); width: 90%; height: 27px; border-radius: 10px; border:2px solid #970320; color: rgb(182, 179, 179); font-size: 20px; font-weight: bold; padding-left: 10px;">90%</div>
+</div>
+</div>
+
+<p class="qualidade">Fofinha</p>
+<div style="background-color: #434141; height: 30px; width: 80%; margin: 2%; border-radius: 10px; padding: 2px;">
+    <div class="loading" style="background-color: rgb(174, 22, 86); width: 100%; height: 27px; border-radius: 10px; border:2px solid #970320; color: rgb(182, 179, 179); font-size: 20px; font-weight: bold; padding-left: 10px;">100%</div>
+</div>
+
+<p class="qualidade">Ciumenta</p>
+<div style="background-color: #434141; height: 30px; width: 80%; margin: 2%; border-radius: 10px; padding: 2px;">
+    <div class="loading" style="background-color: rgb(174, 22, 86); width: 60%; height: 27px; border-radius: 10px; border:2px solid #970320; color: rgb(182, 179, 179); font-size: 20px; font-weight: bold; padding-left: 10px;">60%</div>
+</div>
+<p class="qualidade">Especial</p>
+<div style="background-color: #434141; height: 30px; width: 80%; margin: 2%; border-radius: 10px; padding: 2px;">
+    <div class="loading" style="background-color: rgb(174, 22, 86); width: 100%; height: 27px; border-radius: 10px; border:2px solid #970320; color: rgb(182, 179, 179); font-size: 20px; font-weight: bold; padding-left: 10px;">100%</div>
+</div>
+
+
+</div>
+
+
+<img src="img/user.jpg" class="user">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+      function menuON() {
+        window.location.href="definicoes.html";
+    }
+    var number;
+    function link1() {
+        number = document.querySelector(".number1");
+         window.location.href="pagina1.html";
+  
+    }
+    function link2() {
+        number = document.querySelector(".number1");
+         window.location.href="estatistica.html";
+  
+    }
+    function link3() {
+        number = document.querySelector(".number1");
+         window.location.href="messenger.html";
+  
+    }
+    function link4() {
+        number = document.querySelector(".number1");
+         window.location.href="nuvem.html";
+  
+    }
+
+</script>
+</body>
+</html>

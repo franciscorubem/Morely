@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <link rel="stylesheet" href="pagina1.css">
+    <title>Definições</title>
+    <style>
+     
+        #close{
+           
+            cursor: pointer;
+        }
+        #close:hover{
+            background-color:  rgb(42, 42, 42);
+        }
+        .op{
+            margin: 10%;
+            transition: .2s;
+        }
+        .op:hover{
+          opacity: 0.6;
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div onclick="darMeuNumber()" class="op" style="background-color: rgb(41, 41, 41); padding: 15px; width: 80%;  border-radius: 10px; display: flex;">
+    <i style="font-size: 30px; background-color: rgb(191, 21, 98); border-radius: 20px; color: #ffffff; padding: 10px; margin-right: 10px;" class="fa-solid fa-phone"></i><p style="color: #aeaeae; font-family: sans-serif; font-size: 18px; padding-top: 1%;">Clique aqui para copiar o contacto do programador</p>
+</div>
+<div onclick="sobre_o_app()" class="op" style="background-color: rgb(41, 41, 41); padding: 15px; width: 80%; border-radius: 10px; display: flex; ">
+    <i style="font-size: 30px; background-color: rgb(191, 21, 98); border-radius: 20px; color: #ffffff; padding: 10px; margin-right: 10px;" class="fa-solid fa-gear"></i> <p style="color: #aeaeae; font-family: sans-serif; font-size: 20px; padding-top: 4%; ">Sobre o aplicativo</p>
+</div>
+<div onclick="facebook()" class="op" style="background-color: rgb(41, 41, 41); padding: 15px; width: 80%;  border-radius: 10px; display: flex;">
+    <i  style="font-size: 30px; background-color: rgb(191, 21, 98); border-radius: 20px; color: #ffffff; padding: 10px; margin-right: 10px;"  class="fa-brands fa-facebook"></i>  <p style="color: #aeaeae; font-family: sans-serif; font-size: 20px; padding-top:4%;">Perfil do programador</p>
+</div>
+<div onclick="sair()" class="op" style="background-color: rgb(41, 41, 41); padding: 15px; width: 80%;  border-radius: 10px; display: flex;">
+    <i  style="font-size: 30px; background-color: rgb(191, 21, 98); border-radius: 20px; color: #ffffff; padding: 10px; margin-right: 10px;" class="fa-solid fa-rocket"></i>  <p style="color: #aeaeae; font-family: sans-serif; font-size: 20px; padding-top:2%;">Logout / terminar sessão</p>
+</div>
+
+
+
+      <!-- here start the head -->
+      <header>
+        <div class="h1" style="display: flex;">
+        <h1 style="margin: 5px; width: 50px; color: #ffffff;"><strong style="background-color: white; padding: 5px; border-radius:15px ; color: black; margin: 2px;">Marí</strong>lia</h1>
+           <i id="close" onclick="menuOFF()" class="fa-solid fa-xmark" style="color:  #ffffff;position: absolute; transition: .2s; padding: 10px; border-radius: 10px; color: #ffffff; margin-left: 80%; font-size: 30px; cursor: pointer;"></i>
+    </div>
+        <div class="icons">
+            <strong id="home" onclick="link1()"><i id="ico" class="fa-solid fa-house"></i><strong id="number">15+</strong></strong>
+            <strong onclick="link2()"><i id="ico" class="fa-solid fa-chart-simple"></i><strong id="number" class="number1">5</strong></strong>
+            <strong onclick="link3()"><i id="ico" class="fa-solid fa-envelope"></i><strong id="number">4</strong></strong>
+            <strong onclick="link4()"><i id="icoZ" style="font-size: 22px;"class="fa-solid fa-cloud"></i><strong id="number" class="number1">1</strong></strong>
+        </div>
+      
+    </header>
+    <!-- here ands the head -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+   
+ 
+    function darMeuNumber(){
+      var numero = "926234931";
+      navigator.clipboard.writeText(numero);
+        alert("número copiado com sucesso!")
+   
+    }
+    function sair() {
+         window.location.href="index.html";
+  
+    }
+    function sobre_o_app() {
+        alert("O nosso site oferece uma experiência única e personalizada, permitindo que os clientes encomendem uma adaptação exclusiva para presentear amigos, amigas, namorados ou namoradas. Com foco em transmitir mensagens de carinho, o site oferece a inclusão de imagens, vídeos e mensagens personalizadas, tornando cada presente verdadeiramente especial e memorável. Ao escolher o nosso serviço, você tem a oportunidade de criar um presente significativo, repleto de emoção e personalidade. O nosso compromisso em adaptar o site para refletir a individualidade de cada destinatário garante que cada entrega seja única e inesquecível. Desfrute da experiência de personalização e carinho ao presentear aqueles que são especiais em sua vida, através do nosso site personalizado.");
+    }
+    function facebook() {
+        window.location.href="https://www.faceook.com/rubenmanuel.rubenn";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function menuOFF() {
+       window.location.href="pagina1.html";
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    var number;
+    function link1() {
+        number = document.querySelector(".number1");
+         window.location.href="pagina1.html";
+  
+    }
+    function link2() {
+        number = document.querySelector(".number1");
+         window.location.href="estatistica.html";
+  
+    }
+    function link3() {
+        number = document.querySelector(".number1");
+         window.location.href="messenger.html";
+  
+    }
+    function link4() {
+        number = document.querySelector(".number1");
+         window.location.href="nuvem.html";
+  
+    }
+
+</script>
+</body>
+</html>

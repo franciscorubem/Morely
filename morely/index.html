@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Morely</title>
+</head>
+<body>
+  <img class="imagemback" src="img/IMG-20240709-WA0054.jpg" alt="">
+    <div class="form">
+        <div class="caixaform">
+            <div class="objetoform">
+                <h2>Morely</h2>
+            <input id="nome" type="text" placeholder="insira seu Nome" required>
+            <br>
+            <input id="senha" type="password" placeholder="insira sua senha" required>
+            <br>
+            <button onclick="logar()">Entrar</button>
+            <br>
+         </div>
+        </div>
+    </div>
+
+
+    <script>
+        var user ="Márcia Morely";
+        var pass ="2006";
+        function logar() {
+            var nome = document.getElementById("nome").value;
+            var senha = document.getElementById("senha").value;
+            if (nome==user && senha==pass) {
+                window.location.href="pagina1.html";
+            }else{
+                alert("usuário não reconhecido!");
+            }
+        }
+    </script>
+</body>
+</html>
